@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/ico" href="../Resources/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../Resources/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/user.css" />
+    <script src="../Resources/js/new_account.js"></script>
+    <script src="../Resources/js/tools.js"></script>
+    <title>Tech Green</title>
+</head>
+
+<body onload="showModal('modal')">
+      <!-- Nav Bar-->
+      <nav>
+        
+        <!-- Soon -->
+        <div class="nav-soon" onclick="location.href='../index.html'">
+            <img src="../Resources/img/tread.png" height="90px" alt="">
+            </div>
+
+
+        <!--Nav bar right content-->
+        <div class="nav-right">
+
+            <button class="normal" onclick="location.href='../Login/index.html'">Entrar</button>
+        
+        </div>
+
+    </nav>
+
+    <br><br><br>
+    <div class="content-line">
+        <div class="cont-left">
+            <img class="clickable" src="../Resources/img/back_button_white.png"
+                onclick="location.href='../index.html'" />
+
+
+
+            <div class="singup" onclick="location.href='../Login/index.html'">
+                <p>Já possui uma conta?</p>
+                <b>Entrar</b>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div class="card">
+        <form action="../api/Account/Create" name="createAccount" id="CreateAccount">
+            <h2>Cadastre-se em poucos passos</h2>
+            <p class="left form login-card-margin-left form-text">Nome completo</p>
+            <p><input class="form" type="text" placeholder="Nome Completo" name="nome" id="nome" /> </p>
+
+
+            <p class="left form login-card-margin-left form-text">Email</p>
+            <p><input class="form" type="text" placeholder="E-mail" name="email" id="email" /> </p>
+
+            <p class="left form login-card-margin-left form-text">Número de telefone</p>
+            <p>
+                <input class="form" type="tel" placeholder="Número de celular" name="telefone" id="telefone"/> </p>
+            </p>
+            <p class="left form login-card-margin-left form-error-invisible form-error-visible" id="telefone"></p>
+
+            
+    
+           
+            
+            
+            <p class="left">
+                <input id="AcceptTerms" type="checkbox" name="AcceptTerms" onclick="disableError('AcceptTerms')">
+                <label for="AcceptTerms">Aceito <i class="link">Os Termos</i> de <i class="link">Politica de Privacidade</i>.</label>
+            </p>
+            <p class="right form login-card-margin-left form-error-invisible form-error-visible" id="AcceptTermsError"></p>
+        </form>
+       
+        <p class="right"><button class="normal" onclick="validar()">Seguir</button></p>
+    </div>
+    <div id="loading" style="display:none">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="cssload-wrap">
+                    <div class="cssload-cssload-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Função Validar */
+        function validar() {
+          // pegando o valor do nome pelos names
+          var nome = document.getElementById("nome");
+          var email = document.getElementById("email");
+          var telefone = document.getElementById("telefone");
+
+          // verificar se o nome está vazio
+          if (nome.value == "") {
+            alert("Nome não informado");
+
+            // Deixa o input com o focus
+            nome.focus();
+            // retorna a função e não olha as outras linhas
+            return;
+          }
+          if (email.value == "") {
+            alert("E-mail não informado");
+            email.focus();
+            return;
+          }
+          if (telefone.value == "") {
+            alert("Telefone não informado");
+            telefone.focus();
+            return;
+          }
+          
+          location.href='../Cad/cad_emp.html'
+        }
+        
+      </script>
+</body>
+
+</html>

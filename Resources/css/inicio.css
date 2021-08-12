@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Roboto Black';
+    src: url('../font/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url('../font/Roboto-Italic.ttf');
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 9rem;
+    font-family: 'Roboto Regular';
+    background: #00FFFF;
+}
+
+nav {
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(54, 0, 52);
+    border-width: 3px;
+    border-color: #000;
+    max-height: 10rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 4.2rem;
+    outline-color: #CCC;
+    outline-width: 1px;
+    outline-style: inset;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.5);
+}
+
+div.nav-soon {
+    text-align: left;
+    margin: 1rem;
+    width: 13rem;
+    font-size: 26px;
+    display: inline-block;
+    color: #000000;
+    font-family: unset;
+}
+
+    div.nav-soon:hover {
+        cursor: pointer;
+    }
+
+div.nav-right {
+    text-align: right;
+    float: right;
+    margin: 0.8rem 1rem 5rem 0rem;
+}
+
+div.nav-text {
+    background: transparent;
+    color: #000000;
+    outline: none;
+    margin: 0rem 1rem;
+    font-size: medium;
+    display: inline-block;
+}
+#divBusca{
+    background-color:#ffffff;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    text-align: right;
+    float: right;
+    margin: 0.8rem 1rem 5rem 0rem;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+  }
+  div.card {
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    transition: 0.4s;
+    background: rgb(255, 255, 255);
+    max-width: 27.5rem;
+    margin: 2rem;
+}
+div.content-left {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto Regular';
+    position: absolute;
+    bottom: 50%;
+    margin: 0 1.5rem;
+}
+div.vertical-center {
+    color: rgb(255, 255, 255);
+    left: 50rem;
+    font-family: 'Roboto Regular';
+    position: absolute;
+    bottom: 50%;
+    margin: 0 1.5rem;
+}

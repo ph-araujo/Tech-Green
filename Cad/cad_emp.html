@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../Resources/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="../Resources/css/loading.css" />
+    <script src="../Resources/js/login_scripts.js"></script>
+    <title>Tech Green</title>
+</head>
+
+<body><!-- Nav Bar-->
+    <nav>
+        
+        
+        <div class="nav-soon" onclick="location.href='../index.html'">
+            <img src="../Resources/img/tread.png" height="90px" alt="">
+            </div>
+
+       
+    </nav>
+<br><br><br>
+    <div class="content-line">
+        <div class="content-left">
+            <img class="clickable" src="../Resources/img/back_button_white.png"
+                onclick="location.href='../index.html'" />
+
+            <div class="left-center">
+                <h1></h1>
+                &emsp;
+            </div>
+
+        </div>
+        <div class="content-center">
+            <div class="card vertical-center" style="margin-top:10%">
+
+                <h2>Cadastre sua empresa </h2>
+                <p class="center form login-card-margin-center form-text">Insira seu CNPJ</p>
+                <p><input class="form" type="text" placeholder="CNPJ" name="cnpj" id="cnpj" /></p>
+            
+                <p class="center form login-card-margin-left form-text">Tipo de Empresa</p>
+                <p><input class="form" type="text" placeholder="Empresa" name="empresa" id="empresa" /></p>
+            
+                <p class="center form login-card-margin-center form-text">Nome da loja</p>
+            <p><input class="form" type="text" placeholder="Nome da Loja" name="nomeloja" id="nomeloja"  /></p>
+            
+            <p class="center form login-card-margin-center form-text">Telefone da loja</p>
+            <p><input class="form" type="text" placeholder="TelefoneLoja" name="telefoneloja" id="telefoneloja" /></p>
+            
+            <p class="center form login-card-margin-center form-text">Cep</p>
+            <p><input class="form" type="text" placeholder="Cep" name="cep" id="cep" /></p>
+            
+            <p class="center form login-card-margin-center form-text">Cidade</p>
+            <p><input class="form" type="text" placeholder="Cidade" name="cidade" id="cidade" /></p>
+            
+            <p class="center form login-card-margin-center form-text">Bairro</p>
+            <p><input class="form" type="text" placeholder="Bairro" name="bairro" id="bairro" /></p>
+            
+            <p class="center form login-card-margin-center form-text">Endereço</p>
+            <p><input class="form" type="text" placeholder="Endereço" name="end" id="end" /></p>
+            
+            
+                        
+            <div class="login-buttons">
+                <label class="link signup-text" onclick="location.href='../Cad/cad_mercado.html'">Voltar</label>
+                <button class="normal" type="submit"onclick="validar()">Seguir</button></p>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="modal" id="loadingModal">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        /* Função Validar */
+        function validar() {
+          // pegando o valor do nome pelos names
+          var cnpj = document.getElementById("cnpj");
+          var empresa= document.getElementById("empresa");
+          var nomeloja = document.getElementById("nomeloja");
+          var telefoneloja = document.getElementById("telefoneloja");
+          var cep = document.getElementById("cep");
+          var cidade = document.getElementById("cidade");
+          var bairro = document.getElementById("bairro");
+          var end = document.getElementById("end");
+          
+          // verificar se o nome está vazio
+          if (cnpj.value == "") {
+            alert("CNPJ não informado");
+
+            // Deixa o input com o focus
+            cnpj.focus();
+            // retorna a função e não olha as outras linhas
+            return;
+          }
+          if (empresa.value == "") {
+            alert("Tipo de empresa não informado");
+            empresa.focus();
+            return;
+          }
+          if (nomeloja.value == "") {
+            alert("Nome da Loja não informado");
+            nomeloja.focus();
+            return;
+          }
+          if (telefoneloja.value == "") {
+            alert("Telefone não informado");
+            telefoneloja.focus();
+            return;
+          }
+          if (cep.value == "") {
+            alert("CEP não informado");
+            cep.focus();
+            return;
+          }
+          if (cidade.value == "") {
+            alert("Cidade não informada");
+            telefone.focus();
+            return;
+          }
+          
+          if (bairro.value == "") {
+            alert("Bairro não informado");
+            bairro.focus();
+            return;
+          }
+          if (end.value == "") {
+            alert("Endereço não informado");
+            end.focus();
+            return;
+          }
+          location.href='../Cad/end_cad.html'
+        }
+      </script>
+
+ 
+    <footer>
+        <p>© 2021 - <img src="../Resources/img/tread.png" width="20px" />Rebbity</p>
+    </footer>
+</body>
+
+</html>
